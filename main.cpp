@@ -17,7 +17,7 @@ int main(void){
         cout << "Enter second number. (int) \n";
         cin >> num2;
 
-        cout << "Enter desired operation. (Use lowercase! Options are: add, sub, mult, div, pow, sqrt //(num1), exit) \n";
+        cout << "Enter desired operation. (Use lowercase! Options are: add, sub, mult, div, pow, root, exit) \n";
         cin >> op;
 
         if(op == "add"){
@@ -35,8 +35,10 @@ int main(void){
         else if(op == "pow"){
             cout << pow(num1,num2) << endl;
         }
-        else if(op == "sqrt"){
-            cout << sqrt(num1) << endl;
+        else if(op == "root"){
+            double nom1 = num1;
+            double nom2 = num2;
+            cout << pow(nom1,1/nom2) << endl;
         }
         else if(op == "exit"){
             ex = 1;
